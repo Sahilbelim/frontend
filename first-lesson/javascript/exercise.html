@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <style>
+            body
+            {
+                    background-image: url(../images/bg2.jpeg);
+            }
+            .transbox 
+            {
+            margin: 30px;
+         
+            border: 1px solid black;
+                background-color: #ce840e76;
+            opacity: 0.6;
+            }
+            .my-card
+            {
+                border-radius: 5px;
+            }
+            .transbox:hover 
+            {
+                opacity: 1;
+                 background-color: #ce840e;
+               
+            }
+            input
+            {
+                opacity: 1.2;
+                  font-weight: bold;
+            }
+            .my-card
+            {
+                 margin: 30px;
+                background-color: #ffffff;
+                border: 1px solid black;
+                opacity: 0.6;
+            }
+            .my-card-header
+            {
+                text-align: center;
+                 margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+           input.btn
+           {
+            align-self: center;
+           }
+       
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row mt-5">
+                    <div class="col-6 offset-3">
+                        <div class="card transbox   shadow-lg">
+                            <div class="card-header">
+                                <h3>validetion pan and adhar</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="succses.html" method="post" onsubmit="return CheckInput()" ;>
+                                    <input type="text" class="form-control mb-2 bould" name="pan_number" id="pan"
+                                        placeholder="Enter Pancard number" />
+                                    <input type="text" class="form-control mb-2" name="adhar_number" id="adhar"
+                                        placeholder="Enter adharcard number" />
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <input type="submit" class='btn btn-warning ' value="submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function CheckInput() {
+
+
+                //https://stackoverflow.com/questions/37251151/pancard-structure-validation-in-javascript-and-php-also
+            function validatePAN(panVal) {
+                var regpan = /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/;
+                if (regpan.test(panVal)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            //https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number
+            function validateAdhar(value) {
+                return /^\d{4}\d{4}\d{4}$/.test(value);
+            }
+
+
+
+            var pan = document.getElementById("pan");
+            var adhar = document.getElementById("adhar");
+            if (pan.value == "") {
+                alert("pan number is emty")
+            }
+            else if (validatePAN(pan.value) == false) {
+                alert("invalid Pan number");
+            }
+            else if (adhar.value=="")
+            {
+                alert("adhar number is emty")
+            }
+            else if (validateAdhar(adhar.value)==false)
+            {
+                alert("invalid Adhar number");
+            }
+            else{
+                alert("all input is valid")
+                return true;
+            }
+           
+
+           
+
+            return false;
+        }
+
+        
+    </script>
+</body>
+
+</html>
