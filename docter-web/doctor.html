@@ -22,46 +22,49 @@
 
 
     <!-- navbar -->
-    <nav class=" nav navbar navbar-expand-xl navbar-dark  bg-primary  sticky-top ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Doctor</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic"
-                aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse show d-flex" id="navbarBasic">
-                <ul class="navbar-nav me-auto mb-2 mb-xl-0 justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#aboutus">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#appoinment">Appointment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#department">department</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ourteam">our team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contactus">contect us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">Link</a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-expand-xl navbar-light sticky-top" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <h1>Doctors</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLight"
+            aria-controls="navbarLight" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarLight">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#aboutus">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#appoinment">Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#department">department</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ourteam">our team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactus">contect us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Footer</a>
+                </li>
 
-            </div>
+            </ul>
+
         </div>
-    </nav>
+    </div>
+</nav>
     <!-- navbar -->
-    <div id="home"></div>
+    
     <!-- carousel -->
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
@@ -70,7 +73,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+                aria-label="Slide 3"></button><div id="home"></div>
         </div>
 
         <div class="carousel-inner my-c">
@@ -807,7 +810,7 @@
 
     <!--  -->
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="footer">
         <div class="row">
             <div class="col-12  bg-secondary">
                 <br><br><br>
@@ -854,7 +857,7 @@
             event.preventDefault();
             var divid = $(this).attr('href');
             console.log(divid);
-            $(divid).css('padding-top', '50px');
+            $(divid).css('padding-top', '70px');
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 1000);
