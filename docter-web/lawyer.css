@@ -1,0 +1,29 @@
+h4{
+    text-transform: uppercase;
+}
+body{
+     background-color: #00000077;
+}
+.d-block
+{
+    height: 40em;
+}
+.img-icon
+{
+    width: 15%;
+    height: 15%;
+}
+.my-card
+
+{
+    background-color: bisque;
+}
+.img-1
+{
+    background-image: url(./images/lawyer-1.jpg);
+    background-repeat: no-repeat;
+  
+    background-position: 100px 10px;
+    height: 100%;
+    width: 100%;
+}
