@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+           <div class="col-8 offset-2 mt-3">
+            <div class="card shadow">
+                <div class="card-body">
+                  
+                        <input type="text" class="form-control mt-2 validet" name="row" id="row" placeholder="enter value of row">
+                        <div class="message-row"></div>
+                        <input type="text" name="column" class="form-control mt-2 validet" id="column" placeholder="enter value of column">
+                        <div class="message-column"></div>
+                        <select class="form-select mt-2 validet" id="loop">
+                            <option value="">select loop</option>
+                            <option value="1">while loop</option>
+                            <option value="2">for loop</option>
+                            <option value="3">do while loop</option>
+                        </select>
+                        <div class="message-loop"></div>
+                        <input type="button" value="generate table" class="btn btn-warning mt-2 shadow">
+                    
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+        <script>
+          
+            var validet_input= document.getElementsByClassName("validet");
+            var massage;
+           
+            
+            for(var index=0;index<= validet_input.length;index++)
+            {
+                validet_input[index].onblur = function () {
+                    console.log(this.id);
+                    console.log(this.value);
+                    var massage = "message-" + this.id;
+                    console.log(massage);
+                      if (this.value == "") {
+                         document.getElementById(massage).innerHTML = "input can not be blank";
+                     }
+                 }
+               
+            }
+        </script>
+</body>
+</html>
